@@ -16,6 +16,7 @@ public Thread3(){
 
 		System.out.println("3rd Thread is started!");
 		
+		try {
 		Stream<Integer> evenNumbersStream = oddAndEvenNumbers.list3.stream();
 		Predicate<Integer> evenNumbers = (number) -> {
 			return (number % 2) == 0;
@@ -30,6 +31,9 @@ public Thread3(){
 		};
 		
 		List<Integer> oddNumbersList = oddNumbersStream.filter(oddNumbers).collect(Collectors.toList());
-		oddAndEvenNumbers.oddNumbersList.addAll(oddNumbersList) ;		
+		oddAndEvenNumbers.oddNumbersList.addAll(oddNumbersList) ;	
+		}catch(Exception e) {
+			
+		}
 	}
 }

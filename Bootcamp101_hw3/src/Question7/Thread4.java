@@ -21,6 +21,7 @@ public Thread4(){
 			return (number % 2) == 0;
 		};
 		
+		try {
 		List<Integer> evenNumbersList = evenNumbersStream.filter(evenNumbers).collect(Collectors.toList());
 		oddAndEvenNumbers.evenNumbersList.addAll(evenNumbersList);
 		
@@ -30,6 +31,10 @@ public Thread4(){
 		};
 		
 		List<Integer> oddNumbersList = oddNumbersStream.filter(oddNumbers).collect(Collectors.toList());
-		oddAndEvenNumbers.oddNumbersList.addAll(oddNumbersList);		
+		oddAndEvenNumbers.oddNumbersList.addAll(oddNumbersList);	
+		}catch(Exception e) {
+			
+		}
+		
 	}
 }

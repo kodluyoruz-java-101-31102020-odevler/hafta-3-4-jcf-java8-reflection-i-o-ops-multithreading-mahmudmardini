@@ -14,7 +14,7 @@ public class oddAndEvenNumbers {
 	public static List<Integer> evenNumbersList = new ArrayList();
 	public static List<Integer> oddNumbersList = new ArrayList();
 	oddAndEvenNumbers(){
-		for(int i = 1; i<=100; i++) {
+		for(int i = 1; i<=10000; i++) {
 			mainList.add(i);
 		}
 		int mainListSize = mainList.size();

@@ -18,6 +18,8 @@ public class Thread1 extends Thread{
 	public void run() {
 
 		System.out.println("1st Thread is started!");
+		
+		try {
 		Stream<Integer> evenNumbersStream = oddAndEvenNumbers.list1.stream();
 		Predicate<Integer> evenNumbers = (number) -> {
 			return (number % 2) == 0;
@@ -33,6 +35,9 @@ public class Thread1 extends Thread{
 		
 		List<Integer> oddNumbersList = oddNumbersStream.filter(oddNumbers).collect(Collectors.toList());
 		oddAndEvenNumbers.oddNumbersList.addAll(oddNumbersList) ;
+		}catch(Exception e) {
+			
+		}
 		
 	}
 }
